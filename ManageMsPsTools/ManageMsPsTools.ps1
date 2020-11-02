@@ -31,9 +31,9 @@
     Name: ManageMsPsTools.ps1
     Author: Michael Chew 
     DateCreated: 2-November-2020
-    LastUpdated: 2-November-2020
+    LastUpdated: 3-November-2020
 .LINK
-    https://github.com/michew9/powershell/blob/main/ManageMsPsTools 
+    https://github.com/michew9/PowerShell/blob/master/ManageMsPsTools/ManageMsPsTools.ps1 
 #>
 
 [CmdletBinding()]
@@ -93,7 +93,7 @@ function DownloadInstall(
 
 	Write-Host -Object "$ModuleName is successfully installed ."
 
-del $filename
+	del $filename
 }
 
 ##############################
