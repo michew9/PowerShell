@@ -18,6 +18,8 @@ Processing......................................................................
 1229 rows of camera data successfully extracted into .\2020-12-17-08-24-cameras.csv
 ```
 
+------------
+
 The following are PowerShell scripts that leverage Milestone PsTools:
 
 * [**List Recording Server**](https://github.com/michew9/PowerShell/blob/master/MilestoneScripts/ListRecordingSrvr.ps1) : Simple PowerShell script to list the content of the Milestone Recording Server.
