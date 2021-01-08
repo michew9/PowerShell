@@ -3,6 +3,7 @@
 ## Purpose: Script to manage the MilestonePSTools PowerShell module.
 #
 # Version 1.0 Initial Release
+# Version 1.1 Add TLS1.2 as the default security protocol
 #
 <#   
 .SYNOPSIS   
@@ -101,6 +102,8 @@ function DownloadInstall(
 #  M A I N    P R O G R A M  #
 #                            # 
 ##############################
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 $disphelp = $False
 

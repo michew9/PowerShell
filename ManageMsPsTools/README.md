@@ -51,6 +51,13 @@ MilestonePSTools is successfully installed .
 C:\> 
 ```
 
+```
+By default PowerShell uses TLS 1.0 and the remote ressource is configured ito use TLS 1.2. To tell PowerShell to use TLS 1.2, you need to run:
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Note: Only the current PowerShell session (PowerShell window) will be in TLS 1.2, you must therefore execute this command each time you open the PowerShell window or put it in your PowerShell profile.
+```
+
 ---
 
 ## Reference
