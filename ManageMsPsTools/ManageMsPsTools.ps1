@@ -4,6 +4,7 @@
 #
 # Version 1.0 Initial Release
 # Version 1.1 Add TLS1.2 as the default security protocol
+# Version 1.2 Download MilestonePSTools 1.0.89 
 #
 <#   
 .SYNOPSIS   
@@ -143,9 +144,11 @@ if ($cleanup -eq $True) {
 }
 
 if ($install -eq $True) {
-	DownloadInstall "MipSdkRedist" "20.2.0" "https://psg-prod-eastus.azureedge.net/packages/mipsdkredist.20.2.0.nupkg" "mipsdkredist.20.2.0.zip" "C:\Program Files\WindowsPowerShell\Modules\MipSdkRedist"
+	# DownloadInstall "MipSdkRedist" "20.2.0" "https://psg-prod-eastus.azureedge.net/packages/mipsdkredist.20.2.0.nupkg" "mipsdkredist.20.2.0.zip" "C:\Program Files\WindowsPowerShell\Modules\MipSdkRedist"
+	DownloadInstall "MipSdkRedist" "20.3.0" "https://psg-prod-eastus.azureedge.net/packages/mipsdkredist.20.3.0.nupkg" "mipsdkredist.20.3.0.zip" "C:\Program Files\WindowsPowerShell\Modules\MipSdkRedist"
 
-	DownloadInstall "MilestonePSTools" "1.0.82" "https://psg-prod-eastus.azureedge.net/packages/milestonepstools.1.0.82.nupkg" "milestonepstools.1.0.82.zip" "C:\Program Files\WindowsPowerShell\Modules\MilestonePSTools"
+	# DownloadInstall "MilestonePSTools" "1.0.82" "https://psg-prod-eastus.azureedge.net/packages/milestonepstools.1.0.82.nupkg" "milestonepstools.1.0.82.zip" "C:\Program Files\WindowsPowerShell\Modules\MilestonePSTools"
+	DownloadInstall "MilestonePSTools" "1.0.89" "https://psg-prod-eastus.azureedge.net/packages/milestonepstools.1.0.89.nupkg" "milestonepstools.1.0.89.zip" "C:\Program Files\WindowsPowerShell\Modules\MilestonePSTools"
 
 	Import-Module  MipSdkRedist
 	Import-Module  MilestonePSTools
