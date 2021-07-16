@@ -154,7 +154,7 @@ $CurMsPsToolsVersion = "1.0.89"
 $CurMsPsToolsLink = "https://psg-prod-eastus.azureedge.net/packages/milestonepstools.1.0.89.nupkg"
 $CurMsPsToolsZippedFile = "milestonepstools.1.0.89.zip"
 
-if (($Uninstall.IsPresent -eq $False) -And ($Install.IsPresent -eq $False)) {
+if (($Uninstall.IsPresent -eq $False) -And ($Install.IsPresent -eq $False) -And ($Download.IsPresent -eq $False)) {
     Clear-Host	
 	Write-Host "~~~~~~~~~~~~~~~~~~ Menu Title ~~~~~~~~~~~~~~~~~~" -ForegroundColor Cyan
 	Write-Host "1`: Uninstall - Uninstall Milestone MilestonePSTools and MipSdkRedist modules"
