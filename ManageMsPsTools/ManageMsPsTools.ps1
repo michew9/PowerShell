@@ -15,7 +15,7 @@
 .PARAMETER Uninstall
     To remove the Milestone PSTools and MipSdkRedist modules, use -Uninstall switch
 .PARAMETER install
-    To install the Milestone PSTooles and MipSdkRedist modules, use -install switch
+    To install the Milestone PSTools and MipSdkRedist modules, use -install switch
 .PARAMETER logfile
     To log all the activities to a "logfile" filename.
 .EXAMPLE
