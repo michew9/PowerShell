@@ -15,8 +15,10 @@ All the above steps can be automated using this script. In addition, it can also
 The script can be executed from the command line, or a friendly menu-driven.
 
 The following are supported options:
-- _-cleanup_ This will remove the "MipSdkRedist" and "MilestonePSTools" directories in "C:\Program Files\WindowsPowerShell\Modules"
+- _-uninstall_ This will uninstall the "MipSdkRedist" and "MilestonePSTools" directories in "C:\Program Files\WindowsPowerShell\Modules"
 - _-install_ This will download the "MipSdkRedist" and "MilestonePSTools" packages from the Windows PowerShell Gallery and place the extracted files in the "MipSdkRedist" and "MilestonePSTools" directories in "C:\Program Files\WindowsPowerShell\Modules"
+- _-download_ This will download the "MipSdkRedist" and "MilestonePSTools" package to the temporary directory on the machine
+- _-tmpdir_ Specify the location of the temporary directory on the machine (default is the %TEMP%)
 - _-logfile_ The output of this script will be appended to the specified logfile.
 
 ---
@@ -42,13 +44,51 @@ Usage: .\ManageMsPsTools.ps1 [ -cleanup ] [ -install ] [ -logfile <logfilename> 
 
 ### To remove the current install and reinstall them:
 ```
-C:\> powershell -f ManageMsPsTools.ps1 -cleanup -install
+C:\> powershell -f ManageMsPsTools.ps1 -uninstall -install
 
-Removing C:\Program Files\WindowsPowerShell\Modules\MipSdkRedist directory from the current system
-Removing C:\Program Files\WindowsPowerShell\Modules\MilestonePSTools directory from the current system
-MipSdkRedist is successfully installed .
-MilestonePSTools is successfully installed .
+..Uninstalling module MipSdkRedist
+..  Successfully uninstalled MipSdkRedist from C:\Program Files\WindowsPowerShell\Modules\MipSdkRedist directory
+..Uninstalling module MilestonePSTools
+..  Successfully uninstalled MilestonePSTools from C:\Program Files\WindowsPowerShell\Modules\MilestonePSTools directory
+..Installing module MipSdkRedist using C:\Users\MILEST~1\AppData\Local\Temp\mipsdkredist.20.3.0.zip
+..  Successfully installed MipSdkRedist .
+..  Import-Module MipSdkRedist ran successfully.
+..Installing module MilestonePSTools using C:\Users\MILEST~1\AppData\Local\Temp\milestonepstools.1.0.89.zip
+..  Successfully installed MilestonePSTools .
+..  Import-Module MilestonePSTools ran successfully.
 C:\> 
+```
+
+### To download the package to c:\tmp4 directory:
+```
+
+C:\> powershell -f ManageMsPsTools.ps1 -download -tmpdir c:\tmp
+..Downloading mipsdkredist.20.3.0.zip to c:\tmp
+..  Successfully downloaded mipsdkredist.20.3.0.zip to c:\tmp
+..Downloading milestonepstools.1.0.89.zip to c:\tmp
+..  Successfully downloaded milestonepstools.1.0.89.zip to c:\tmp
+```
+
+### To uninstall the packages:
+```
+
+C:\> powershell -f ManageMsPsTools.ps1 -uninstall
+..Uninstalling module MipSdkRedist
+..  Successfully uninstalled MipSdkRedist from C:\Program Files\WindowsPowerShell\Modules\MipSdkRedist directory
+..Uninstalling module MilestonePSTools
+..  Successfully uninstalled MilestonePSTools from C:\Program Files\WindowsPowerShell\Modules\MilestonePSTools directory
+```
+
+### To install the package from c:\tmp4 directory:
+```
+
+C:\> powershell -f ManageMsPsTools.ps1 -install -tmpdir c:\tmp
+..Installing module MipSdkRedist using c:\tmp\mipsdkredist.20.3.0.zip
+..  Successfully installed MipSdkRedist .
+..  Import-Module MipSdkRedist ran successfully.
+..Installing module MilestonePSTools using c:\tmp\milestonepstools.1.0.89.zip
+..  Successfully installed MilestonePSTools .
+..  Import-Module MilestonePSTools ran successfully.
 ```
 
 ```
@@ -61,6 +101,6 @@ Note: Only the current PowerShell session (PowerShell window) will be in TLS 1.2
 ---
 
 ## Reference
-[MipSdkRedist 20.2.0](https://www.powershellgallery.com/packages/MipSdkRedist/20.2.0)
+[MipSdkRedist 20.3.0](https://www.powershellgallery.com/packages/MipSdkRedist/20.3.0)
 
-[MilestonePSTools 1.0.83](https://www.powershellgallery.com/packages/MilestonePSTools/1.0.83)
+[MilestonePSTools 1.0.89](https://www.powershellgallery.com/packages/MilestonePSTools/1.0.89)
