@@ -29,13 +29,14 @@ The following are supported options:
 C:\> powershell -f ManageMsPsTools.ps1
 
 ~~~~~~~~~~~~~~~~~~ Menu Title ~~~~~~~~~~~~~~~~~~
-1: Cleanup - Remove Milestone MilestonePSTools and MipSdkRedist modules
+1: Uninstall - Uninstall Milestone MilestonePSTools and MipSdkRedist modules
 2: Install - Install Milestone MilestonePSTools and MipSdkRedist modules
-3: Help - Display CLI options for this script.
+3: Download - Download Milestone MilestonePSTools and MipSdkRedist modules
+4: Help - Display CLI options for this script.
 Q: Quit (default)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Please make a selection (1-3,Q): 3
-Usage: .\ManageMsPsTools.ps1 [ -cleanup ] [ -install ] [ -logfile <logfilename> ]
+Please make a selection (1-4,Q): 3
+Usage: .\ManageMsPsTools.ps1 [ -uninstall ] [ -install ] [ -download ] [ -logfile <logfilename> ]
 
  get-help .\ManageMsPsTools.ps1 -examples
  get-help .\ManageMsPsTools.ps1 -detailed
